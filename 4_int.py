@@ -14,7 +14,7 @@
 # Please type in a number: seven
 # Please type in a number: -3
 # Please type in a number: 8
-#
+
 # Sample Output:
 # You must type a valid integer!
 # Attempt processed.
@@ -27,6 +27,19 @@ prompt = "Please type in a number: "
 lower = 5
 upper = 10
 # write your code here:
+print("Exercise 4: Validating input within a numeric range using try / except / finally")
+def read_input(prompt, lower, upper):
+    
+    try:
+        number = int(input(prompt))
+
+        if  number < lower or number > upper:
+            raise ValueError("Number must be between 5 and 10!")
+        return number
+    except ValueError as e:
+        print(f"Error:{e}")
+    else:
+        print("Number accepted.") 
 
 
 result = read_input(prompt, lower, upper)
