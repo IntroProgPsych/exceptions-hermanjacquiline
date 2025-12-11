@@ -24,3 +24,16 @@
 # Error: Age must be a positive integer!
 
 # write your code here:
+print("Exercise 3: Using raise to create a custom error")
+def check_age(age):
+    if not isinstance(age, int) or age <= 0:
+        raise ValueError("Age must be a positive integer!")
+    return True
+try:
+    user_input = input("Enter your age:")
+    age = int(user_input)
+    check_age(age)
+except ValueError as e:
+    print(f"Error: {e}")
+else:
+    print("Age accepted.")

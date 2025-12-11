@@ -22,3 +22,13 @@
 # Attempt finished.
 
 # write your code here:
+print("Exercise 2: Using else after a successful try")
+try:
+    user_input = input("Enter an integer:")
+    number = int(user_input)
+except ValueError:
+    print("Error: That is not an integer.")
+else:
+    print("Conversion successful!")
+finally:
+    print("Attempt finished.")

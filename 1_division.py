@@ -25,3 +25,17 @@
 # Operation finished.
 
 # write your code here:
+print("Exercise 1: Safe division with try / except / else / finally")
+try:
+    numerator = float(input("Enter the numerator:"))
+    denominator = float(input("Enter the denominator:"))
+    result = numerator / denominator
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+except ValueError:
+    print("Error: You must enter numeric values.")
+else:
+    print(f"Division succesful! Result: {result}")
+finally:
+    print("Operation finished.")
+
